@@ -1,0 +1,182 @@
+
+.shorts-container{
+  /* height: calc(100vh - 60px); */
+  height: 100vh;
+  overflow-y: scroll;
+
+}
+
+.back-btn{
+position: absolute;
+top: 1.5rem;
+left: 0.5rem ;
+z-index: 2;
+cursor: pointer;
+}
+
+.shorts-container {
+  scrollbar-width: none; 
+}
+
+.shorts-container::-webkit-scrollbar {
+  width: 0; 
+}
+
+.shorts-player{
+display: flex;
+justify-content: center;
+align-items: start;
+
+height: 100%;
+}
+
+.shorts-div > div:nth-of-type(1) {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.shorts-div {
+  position: relative;
+  /* padding: 0.5rem; */
+  overflow: hidden;
+  /* Maintain 9/16 aspect ratio */
+  aspect-ratio: 9/16;
+
+  /* Set a base width of 100vw and let height adjust automatically */
+  /* width: 100%; */
+  /* height:auto; */
+
+  /* Constrain the height and width to not exceed the viewport */
+  max-width: 100%;
+  max-height: 100%;
+
+  /* Ensure it scales down proportionally while maintaining the aspect ratio */
+  object-fit: contain;
+
+  /* Border radius for aesthetic */
+  border-radius: 1rem !important;
+}
+
+@media (min-aspect-ratio: 9/16) {
+  .shorts-div {
+    width: auto;  
+    height: 100%;  
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  .shorts-div {
+    width: 100%;  
+    height: auto;  
+  }
+}
+
+
+/* .shorts-player */
+
+.shorts-div video{
+  /* transform: scale(3.2); */
+}
+
+
+/*controls*/
+.shorts-controls{
+/* background-color: rgba(0,0,0, 0.5); */
+ position: absolute;
+ bottom: 1rem;
+ width: 100%;
+ 
+}
+
+.shorts-title-container{
+background-color: rgba(0,0,0, 0.5);
+ position: absolute;
+ bottom: 50%;
+ width: 100%;
+}
+
+.shorts-title {
+/* overflow: hidden; */
+/* white-space: nowrap; */
+/* text-overflow: ellipsis; */
+}
+
+.shorts-title.expanded {
+white-space: normal;
+overflow: visible;
+text-overflow: initial;
+}
+
+.read-more-button {
+background-color: transparent;
+border: none;
+color: #fff;
+cursor: pointer;
+}
+
+.shorts-loading{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  /* margin-right: 2rem; */
+}
+
+.play-pause-btn{
+position: absolute;
+top: 1rem;
+right: 0;
+}
+
+.share-btn{
+position: absolute;
+bottom: 20%;
+right: 0;
+
+}
+
+.semi-trans{
+color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.share-btn p{
+font-size: 0.7rem;
+}
+
+
+.full-vid-btn{
+  position: absolute !important;
+  bottom: 23%;
+  left: 5px;
+  font-size: 0.9rem !important;
+  color: rgba(202, 162, 87,0.7) !important;
+}
+
+.full-vid-btn:hover{
+  border: 1px solid rgba(202, 162, 87,0.5) !important;
+}
+
+.shorts-track {
+-webkit-appearance: none;
+appearance: none; 
+width: 100%;
+outline: none;
+/* border-radius: 15px; */
+height: 2px;
+background: rgba(255, 255, 255, 0.2) ;
+transition: height  ease-in-out 0.3s;
+
+}
+
+
+.shorts-track::-webkit-slider-thumb {
+display: none;
+
+}
+
+.shorts-track::-moz-range-thumb {
+display: none;
+
+
+}

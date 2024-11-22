@@ -1,0 +1,17 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.stringgeo.ott",
+        "sha256_cert_fingerprints": [
+          "87:83:49:D7:E4:F1:19:4B:A7:E2:B3:A1:A8:25:4B:77:B8:23:11:65:0C:8F:11:B7:92:02:98:52:DD:9A:8D:4A",
+          "31:BD:D3:02:01:1E:90:1E:12:BC:F1:62:37:24:E8:56:4A:29:5E:8F:71:F5:7B:9D:70:3C:5D:01:50:E1:18:43",
+          "10:B3:49:25:E3:CC:30:69:97:A9:6D:4F:6F:10:26:EC:40:2E:DE:3C:3C:6F:0C:F1:02:6B:C7:9A:0B:9F:98:67",
+          "E1:FD:31:27:F0:11:7A:B7:27:7D:8B:5A:69:34:5C:DA:D9:34:BE:98:80:E1:7C:A6:7E:76:2D:BD:3D:AD:33:D1",
+          "22:E6:EA:AC:4D:8E:54:F1:FC:BA:34:0A:25:43:50:48:7F:C4:94:8E:F9:BE:20:78:CA:50:BC:11:8D:98:B7:A5"
+        ]
+      }
+    }
+  ]
+  

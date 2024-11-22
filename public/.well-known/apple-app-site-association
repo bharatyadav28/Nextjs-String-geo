@@ -1,0 +1,17 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+          {
+              "appIDs": [
+                  "T8Z8D823P7.com.example.string-geo"
+              ],
+              "paths": [
+                  "/uploads",
+                  "NOT stringgeo.com"
+              ],
+              "components": []
+          }
+      ]
+  }
+}

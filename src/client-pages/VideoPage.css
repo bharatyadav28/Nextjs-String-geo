@@ -1,0 +1,119 @@
+.preview-container{
+    position: relative;
+   height: 100%;
+   width: 100%;
+   max-height: 100vh;
+   margin-top: -60px;
+   aspect-ratio: 16/9;
+   background: #000;
+}
+
+.preview-image-wrapper{
+    position: relative;
+    margin-left: auto;
+
+}
+
+.preview-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 50%; 
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+    pointer-events: none; 
+}
+
+.preview-image-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50%; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+   
+        /* background-image: radial-gradient(circle farthest-corner at right top, rgba(255, 255, 255, 0) 10%, rgba(0, 0, 0, 0.5) 100%); */
+    
+      
+      pointer-events: none;
+  }
+
+.preview-image{
+    max-width: 100%;
+    max-height: 100vh;
+    aspect-ratio: 16/9;
+}
+
+.floating-text{
+    position: absolute;
+    color: #fff !important;
+    bottom: 3rem;
+    left: 2rem;
+    z-index: 2;
+    /* transform: translate(-50%,-50%);  */
+    max-width: 40%;
+    /* text-align:center; */
+  }
+.sub-to-watch-btn{
+    background: var(--primary-color) !important;
+    /* position: absolute; */
+    color: #fff !important;
+    /* bottom: 2rem; */
+    /* left: 2rem; */
+    /* z-index: 2; */
+    /* transform: translate(-50%,-50%);  */
+     width: 100%;
+     max-width: 380px;
+  }
+  
+
+  .sub-to-watch-btn:hover{
+      background: rgba(255, 255, 255, 1) !important;
+      color: var(--primary-color) !important;
+  }
+
+
+.big-share-btn{
+    background: var(--secondary-color) !important;
+    /* position: absolute; */
+    color: #fff !important;
+    /* bottom: 2rem; */
+    /* left: 2rem; */
+    /* z-index: 2; */
+    /* transform: translate(-50%,-50%);  */
+  
+  }
+  
+  .big-share-btn:hover{
+      background: rgba(255, 255, 255, 1) !important;
+      color: var(--primary-color) !important;
+  }
+
+
+  @media (max-width: 900px) {
+    .floating-text{
+        bottom: 0;
+        left: 10px;
+    }
+
+    .preview-container{
+    margin-top: 0;
+    }
+
+    
+  }
+  @media (max-width: 600px) {
+    .sub-to-watch-btn{
+       width: unset;
+       
+    }
+
+   
+
+    
+  }
+

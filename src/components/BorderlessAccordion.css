@@ -1,0 +1,33 @@
+.borderless-accordion .accordion-button {
+    border: none !important;
+  }
+  
+  .borderless-accordion .accordion-item, .borderless-accordion .accordion-button {
+   background: rgba(138, 138, 138, 0.16) !important;
+   color: white !important;
+   backdrop-filter: blur(2px);
+   -webkit-backdrop-filter: blur(2px);
+  }
+  /* .borderless-accordion .accordion-header {
+   background: rgba(138, 138, 138, 0.16) !important;
+  } */
+  .borderless-accordion .accordion-body {
+   background: rgba(138, 138, 138, 0.16) !important;
+   backdrop-filter: blur(2px);
+   -webkit-backdrop-filter: blur(2px);
+  }
+  
+  .borderless-accordion .accordion-button:not(.collapsed){
+    box-shadow: none !important;
+  }
+  
+  .borderless-accordion .accordion-button::after{
+    display: none !important;
+  }
+  
+  .borderless-accordion .accordion-button:focus{
+      box-shadow:  0 0 0 0.15rem rgba(202, 162, 87, 0.7) !important;
+  }
+  
+  
+  

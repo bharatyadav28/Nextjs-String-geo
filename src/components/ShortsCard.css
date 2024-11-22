@@ -1,0 +1,22 @@
+
+
+.shorts-card{
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+    max-width: 300px;
+    width: 100%;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+}
+
+.shorts-card:not(:hover) {
+    transform: scale(1);
+    filter: none;
+ }
+
+.shorts-card:hover{
+    
+    transform: scale(1.05);
+    z-index: 99 !important;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .57);
+}

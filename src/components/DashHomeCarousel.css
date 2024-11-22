@@ -1,0 +1,55 @@
+
+.floating-carousel-text{
+    position: absolute;
+    bottom: 3rem;
+    left: 2rem;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.carousel-section{
+    position: relative;
+    margin-top: -60px;
+}
+
+
+
+
+@media (min-width: 900px) {
+    
+   
+.inner-carousel .carousel-indicators {
+    bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+
+    .carousel-section{
+        margin-top: 0;
+    }
+
+
+    
+}
+
+
+@media (max-width: 600px) {
+    .carousel-section{
+        height: 350px;
+    }
+
+    .hero-title{
+        font-size: 1rem !important;
+    }
+
+    .floating-carousel-text{
+        /* position: static; */
+      text-align: center;
+      /* height: 100%; */
+      bottom: 0;
+      left: unset;
+    }
+
+}

@@ -1,0 +1,103 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nexa:wght@400;700&display=swap'); */
+/* @import url('https://fonts.cdnfonts.com/css/nexa'); */
+/* @import url('https://db.onlinewebfonts.com/c/12108809f49c49bcdc126dcecc938761?family=Nexa+Light'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito:wght@400;900&display=swap'); */
+/* @import url('https://cdn.jsdelivr.net/npm/fontsource-helvetica@latest'); */
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: "NexaHeavy";
+  src: url("/public/fonts/NexaHeavy.ttf");
+}
+@font-face {
+  font-family: "NexaBold";
+  src: url("/public/fonts/NexaBold.otf");
+}
+@font-face {
+  font-family: "NexaLight";
+  src: url("/public/fonts/NexaLight.otf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("/public/fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("/public/fonts/notoSans.ttf");
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("/public/fonts/verdana.ttf");
+}
+
+html {
+  font-size: 15px;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  font-family: "NotoSans", sans-serif !important;
+  /* font-weight: bold; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: rgba(23, 15, 0, 1) !important; */
+  background: #000 !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.nexa-heavy {
+  font-family: "NexaHeavy", sans-serif !important;
+}
+.open-sans {
+  font-family: "OpenSans", sans-serif !important;
+}
+.noto-sans {
+  font-family: "NotoSans", sans-serif !important;
+}
+.verdana {
+  font-family: "Verdana", sans-serif !important;
+}
+
+.search-title {
+  font-family: "NexaBold", sans-serif;
+  /* font-weight: 900; */
+  word-spacing: 0.5rem;
+  /* letter-spacing: 4px; */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #170f00;
+  /* background: transparent; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.scrnli_recorder_root {
+  display: none;
+}
+
+@media print {
+  html,
+  body {
+    display: none;
+  }
+}

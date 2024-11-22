@@ -1,0 +1,104 @@
+.main-logo{
+    z-index: 100;
+    pointer-events: none;
+    /* align-self: center; */
+   
+    width: fit-content;
+}
+
+.main-logo-row .sub-btn{
+    pointer-events: all;
+}
+
+.main-logo-row{
+    top: 0;
+    right:0;
+    pointer-events: none;
+}
+
+.home-section{
+    position: relative;
+    max-height: calc(100vh - 60px);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* overflow: hidden; */
+
+}
+
+
+.section-height{
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-height: calc(100vh - 60px);
+}
+
+
+
+
+.carousel-control-next,.carousel-control-prev{
+  height: fit-content;
+  top: calc(50% - 25px) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  outline:0 !important;
+  opacity: 0.9 !important;
+  /* background: rgba(0, 0, 0, 0.5) !important; */
+  border-radius: 50% !important;
+  max-width: 3rem !important;
+  aspect-ratio: 1/1 !important;
+  z-index: 999 !important;
+  --bs-link-color-rgb: white !important;
+}
+
+.main-logo .sub-btn{
+   font-size: calc(1.3rem + .6vw) !important;
+}
+
+@media (max-width: 900px) {
+    .main-logo{
+
+        max-width: 50%;
+    }
+    .main-logo .sub-btn{
+        font-size: 0.8rem !important ;
+
+    }
+    
+}
+
+/* 
+
+@media (max-width: 1300px) {
+    .main-logo{
+
+        top: 40%;
+    }
+    
+}
+@media (max-width: 1100px) {
+    .main-logo{
+
+        top: 35%;
+    }
+    
+}
+@media (max-width: 750px) {
+    .main-logo{
+
+        position: fixed;
+        top: 20%;
+       
+    }
+    
+} */
+
+/* .main-logo{
+
+    position: fixed;
+    top: 10em;
+} */
+/* .logo-div{
+    position: absolute;
+    width: 99vw;
+} */
+
