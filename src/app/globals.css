@@ -8,27 +8,27 @@
 
 @font-face {
   font-family: "NexaHeavy";
-  src: url("/public/fonts/NexaHeavy.ttf");
+  src: url("/fonts/NexaHeavy.ttf");
 }
 @font-face {
   font-family: "NexaBold";
-  src: url("/public/fonts/NexaBold.otf");
+  src: url("/fonts/NexaBold.otf");
 }
 @font-face {
   font-family: "NexaLight";
-  src: url("/public/fonts/NexaLight.otf");
+  src: url("/fonts/NexaLight.otf");
 }
 @font-face {
   font-family: "OpenSans";
-  src: url("/public/fonts/OpenSans-Regular.ttf");
+  src: url("/fonts/OpenSans-Regular.ttf");
 }
 @font-face {
   font-family: "NotoSans";
-  src: url("/public/fonts/notoSans.ttf");
+  src: url("/fonts/notoSans.ttf");
 }
 @font-face {
   font-family: "Verdana";
-  src: url("/public/fonts/verdana.ttf");
+  src: url("/fonts/verdana.ttf");
 }
 
 html {

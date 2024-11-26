@@ -1,56 +1,49 @@
-
-footer{
+footer {
   overflow-x: hidden;
 }
-.donate-btn{
-  background-color: #D94004 !important;
+.donate-btn {
+  background-color: #d94004 !important;
   color: white !important;
   font-weight: 700 !important;
-
 }
-.donate-btn:hover{
+.donate-btn:hover {
   background-color: white !important;
-  color: #D94004 !important;
-
+  color: #d94004 !important;
 }
 
 .social-icons-container {
   margin: auto;
   max-width: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  
-  .page-link:hover{
-    color: var(--primary-color) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-  }
+.page-link:hover {
+  color: var(--primary-color) !important;
+}
 
-  .page-link.active{
-    color: var(--primary-color) !important;
+.page-link.active {
+  color: var(--primary-color) !important;
+}
 
-  }
+.social-icon {
+  color: rgba(195, 195, 195, 1);
+}
 
-  .social-icon{
-    color:  rgba(195, 195, 195, 1);
+.social-icon:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
 
-  }
-  
-  .social-icon:hover {
-    color: var(--primary-color);
-    cursor: pointer;
-  }
-  
+.footer-section {
+  background-image: url("/bg/footerBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: rgb(255, 255, 255, 1);
+}
 
-  .footer-section{
-    background-image: url('../../public/bg/footerBg.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: rgb(255,255, 255, 1);
-  }
-
-  .copy-right{
-    color: rgba(152, 152, 152, 1);
-    font-size: 0.9rem;
-  }
+.copy-right {
+  color: rgba(152, 152, 152, 1);
+  font-size: 0.9rem;
+}

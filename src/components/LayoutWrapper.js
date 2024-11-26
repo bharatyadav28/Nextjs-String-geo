@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import Aos from "aos";
 import { Provider } from "react-redux";
@@ -16,10 +17,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import store from "../store";
-import ConnectionDetection from "./ConnectionDetection";
+// import ConnectionDetection from "./ConnectionDetection";
 import useDetectDevTools from "@/utils/useDetectDevTools";
 import usePreventScrollOnSpace from "@/utils/usePreventScrollOnSpace";
 import Loader from "./Loader";
+
+const ConnectionDetection = dynamic(() => import("./ConnectionDetection"), {
+  ssr: false,
+});
 
 const LayoutWrapper = ({ children }) => {
   const pathname = usePathname();
@@ -68,9 +73,9 @@ const LayoutWrapper = ({ children }) => {
               {children}
               {isAccountPage || isAuthPage || isShortsPage ? null : <Footer />}
             </SkeletonTheme>
-            <ConnectionDetection />
           </>
         )}
+        <ConnectionDetection />
       </Provider>
     </GoogleOAuthProvider>
   );

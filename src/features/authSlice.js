@@ -2,22 +2,31 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import Cookies from "js-cookie";
 
+// const initialState = {
+//   user: localStorage.getItem("user")
+//     ? JSON.parse(localStorage.getItem("user"))
+//     : null,
+//   accessToken: localStorage.getItem("accessToken")
+//     ? JSON.parse(localStorage.getItem("accessToken"))
+//     : null,
+//   refreshToken: localStorage.getItem("refreshToken")
+//     ? JSON.parse(localStorage.getItem("refreshToken"))
+//     : null,
+//   isActivePlan: localStorage.getItem("isActivePlan")
+//     ? JSON.parse(localStorage.getItem("isActivePlan"))
+//     : null,
+//   watchlist: localStorage.getItem("watchlist")
+//     ? JSON.parse(localStorage.getItem("watchlist"))
+//     : null,
+//   // watchlist:[],
+// };
+
 const initialState = {
-  user: localStorage.getItem("user")
-    ? JSON.parse(localStorage.getItem("user"))
-    : null,
-  accessToken: localStorage.getItem("accessToken")
-    ? JSON.parse(localStorage.getItem("accessToken"))
-    : null,
-  refreshToken: localStorage.getItem("refreshToken")
-    ? JSON.parse(localStorage.getItem("refreshToken"))
-    : null,
-  isActivePlan: localStorage.getItem("isActivePlan")
-    ? JSON.parse(localStorage.getItem("isActivePlan"))
-    : null,
-  watchlist: localStorage.getItem("watchlist")
-    ? JSON.parse(localStorage.getItem("watchlist"))
-    : null,
+  user: null,
+  accessToken: null,
+  refreshToken: null,
+  isActivePlan: null,
+  watchlist: null,
   // watchlist:[],
 };
 
@@ -30,6 +39,12 @@ const authSlice = createSlice({
   //     refreshToken: null,
   //   },
   reducers: {
+    setInitialAuth: (state, action) => {
+      state.user = action.payload.user;
+      state.accessToken = action.payload.accessToken;
+      state.refreshToken = action.payload.refreshToken;
+      state.isActivePlan = action.payload.isActivePlan;
+    },
     setUser: (state, action) => {
       state.user = action.payload;
       localStorage.setItem("user", JSON.stringify(action.payload));
@@ -85,6 +100,7 @@ export const {
   setRefreshToken,
   setIsActivePlan,
   clearAuth,
+  setInitialAuth,
 } = authSlice.actions;
 export const selectAuth = (state) => state.auth;
 export default authSlice.reducer;

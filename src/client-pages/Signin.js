@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import HeaderLogo from "../components/HeaderLogo";
 import SigninCard from "../components/SigninCard";
@@ -24,7 +24,9 @@ function Signin() {
           style={{ borderWidth: "3px", color: "rgba(255, 255, 255, 0.34)" }}
         />
 
-        <SigninCard />
+        <Suspense fallback={<div>Loading...</div>}>
+          <SigninCard />\
+        </Suspense>
       </Container>
     </section>
   );

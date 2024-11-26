@@ -31,7 +31,9 @@ export async function middleware(request) {
   }
 
   if (!refreshToken && restrictedPaths.includes(pathname)) {
-    return NextResponse.redirect(new URL("/auth/signin", request.url));
+    return NextResponse.redirect(
+      new URL(`/auth/signin?from=${pathname}`, request.url)
+    );
   }
 
   return NextResponse.next();

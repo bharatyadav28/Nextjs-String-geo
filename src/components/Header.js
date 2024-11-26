@@ -43,6 +43,7 @@ function Header() {
   const [search, setSearch] = useState("");
 
   const pathname = usePathname();
+  const [isClientEnv, setIsClientEnv] = useState(false);
 
   const sLogo = "/logo/swhite.png";
   // const handleOffcanvasHide = () => {
@@ -68,6 +69,10 @@ function Header() {
       console.log("Error fetching profile", error);
     }
   };
+
+  useEffect(() => {
+    setIsClientEnv(true);
+  }, []);
 
   useEffect(() => {
     if (accessToken) {
@@ -189,7 +194,8 @@ function Header() {
     return { genresToShow, remainingGenres };
   };
 
-  const { genresToShow, remainingGenres } = calculateVisibleGenres();
+  const { genresToShow, remainingGenres } =
+    isClientEnv && calculateVisibleGenres();
 
   return (
     <>

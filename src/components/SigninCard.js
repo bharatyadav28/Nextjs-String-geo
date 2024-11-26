@@ -147,6 +147,8 @@ function SigninCard() {
     }
   };
 
+  const from = searchParams.get("from");
+
   useEffect(() => {
     if (refreshToken) {
       if (redirectFrom) {
@@ -155,11 +157,9 @@ function SigninCard() {
         } else {
           router.push(`/auth/billing?redirectFrom=${redirectFrom}`);
         }
-      }
-      //  else if (location.state?.from) {
-      //   router.push(location.state.from, { replace: true });
-      // }
-      else {
+      } else if (from) {
+        router.push(from);
+      } else {
         if (redirectToPaymentPage) {
           router.push("/auth/billing");
         } else {
@@ -171,7 +171,7 @@ function SigninCard() {
     refreshToken,
     accessToken,
     isActivePlan,
-    location,
+    from,
     router.push,
     redirectToPaymentPage,
   ]);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import SubscriptionCards from "./SubscriptionCards";
 
@@ -6,6 +6,12 @@ import { useRouter } from "next/navigation";
 
 export function HomePackages() {
   const router = useRouter();
+
+  const [isClientEnv, setIsClientEnv] = useState(false);
+
+  useEffect(() => {
+    setIsClientEnv(true);
+  }, []);
 
   return (
     <section className="py-4 package-section" id="home-packages">
@@ -32,7 +38,9 @@ export function HomePackages() {
             <p
               className="mb-0"
               style={{
-                fontSize: `${window.innerWidth >= 768 ? "1.25rem" : "0.8rem"}`,
+                fontSize: `${
+                  isClientEnv && window.innerWidth >= 768 ? "1.25rem" : "0.8rem"
+                }`,
               }}
             >
               String is the only standing platform in the world that is
@@ -40,7 +48,9 @@ export function HomePackages() {
             </p>
             <p
               style={{
-                fontSize: `${window.innerWidth >= 768 ? "1.25rem" : "0.8rem"}`,
+                fontSize: `${
+                  isClientEnv && window.innerWidth >= 768 ? "1.25rem" : "0.8rem"
+                }`,
               }}
             >
               Through String come! Let’s tell the glory of Bharat and be a

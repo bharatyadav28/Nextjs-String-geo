@@ -1,43 +1,37 @@
-.plan-card{
-    border: 1px solid rgba(174, 174, 174, 0.12) !important;
-    background: rgba(55, 55, 55, 0.24) !important;
-    transition: all 0.3s;
+.plan-card {
+  border: 1px solid rgba(174, 174, 174, 0.12) !important;
+  background: rgba(55, 55, 55, 0.24) !important;
+  transition: all 0.3s;
 }
 
+.save-pill {
+  background-color: rgba(217, 64, 4, 1);
 
-
-.save-pill{
-background-color: rgba(217, 64, 4, 1);
-
-font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 
-
-.annual-subcard{
-   border: 1px solid rgba(255, 255, 255, 0.42) !important;
+.annual-subcard {
+  border: 1px solid rgba(255, 255, 255, 0.42) !important;
 }
-.annual-subcard .price{
-    color: #CAA257 !important;
-    
+.annual-subcard .price {
+  color: #caa257 !important;
 }
 
-.selected-card{
-    background: rgba(202, 162, 87, 0.12) !important;
-    border: 1px solid rgba(202, 162, 87, 1) !important;
-    backdrop-filter: blur(5px) !important;
-  }
-
-.price-card{
-    transition: all 0.3s;
-    color: rgba(216, 216, 216, 1);
+.selected-card {
+  background: rgba(202, 162, 87, 0.12) !important;
+  border: 1px solid rgba(202, 162, 87, 1) !important;
+  backdrop-filter: blur(5px) !important;
 }
-.price-card:hover{
-    /* transform: scale(1.05); */
-    background: rgba(202, 162, 87, 0.12) !important;
-  
-  }
 
+.price-card {
+  transition: all 0.3s;
+  color: rgba(216, 216, 216, 1);
+}
+.price-card:hover {
+  /* transform: scale(1.05); */
+  background: rgba(202, 162, 87, 0.12) !important;
+}
 
-  .package-section{
-   background-image: url('../../public/bg/plansBg.svg');
-  }
+.package-section {
+  background-image: url("/bg/plansBg.svg");
+}

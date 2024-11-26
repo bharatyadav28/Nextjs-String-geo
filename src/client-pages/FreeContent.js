@@ -86,7 +86,10 @@ function FreeContent() {
                 <h3>Shorts</h3>
               </Col>
               <Col xs={4} className="text-end">
-                <Link href={"all-shorts"} style={{ color: "white" }}>
+                <Link
+                  href={"/free-trail/all-shorts"}
+                  style={{ color: "white" }}
+                >
                   View All <FaAngleRight />
                 </Link>
               </Col>
