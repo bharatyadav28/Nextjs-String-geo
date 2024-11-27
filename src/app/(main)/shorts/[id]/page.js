@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       type: "video.other",
       title: video.title,
-      description: video.description,
+      // description: video.description,
       images: [
         {
           url: thumbnailUrl,

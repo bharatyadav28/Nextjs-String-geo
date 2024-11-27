@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-// import { jwtDecode } from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 const restrictedPaths = [
   "/dashboard/watchlist",
@@ -13,10 +13,8 @@ export async function middleware(request) {
   const pathname = request.nextUrl.pathname;
 
   const refreshToken = cookies().get("refreshToken")?.value || "";
-  // const isValidToken =
-  //   refreshToken && jwtDecode(refreshToken)?.exp < Date.now() / 1000;
-
-  // const pathname = request.nextUrl.pathname;
+  const isValidToken =
+    refreshToken && jwtDecode(refreshToken)?.exp > Date.now() / 1000;
 
   if (
     pathname.startsWith("/_next") ||
@@ -30,7 +28,7 @@ export async function middleware(request) {
     return NextResponse.next();
   }
 
-  if (!refreshToken && restrictedPaths.includes(pathname)) {
+  if (!isValidToken && restrictedPaths.includes(pathname)) {
     return NextResponse.redirect(
       new URL(`/auth/signin?from=${pathname}`, request.url)
     );

@@ -4,8 +4,6 @@ import VideoPage from "@/client-pages/VideoPage";
 export async function generateMetadata({ params }) {
   // Fetch the video data
 
-  // Thumbnail URL Generated
-
   const response = await fetch(
     `https://api.stringgeo.com/api/video/get-video-preview/${params.id}`,
     {
@@ -30,7 +28,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       type: "video.other",
       title: video.title,
-      description: video.description,
+      // description: video.description,
       images: [
         {
           url: thumbnailUrl,

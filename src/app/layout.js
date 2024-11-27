@@ -8,6 +8,10 @@ import "./App.css";
 export const metadata = {
   title: "String Geo",
   description: "String Geo web app",
+  icons: {
+    icon: "/logo/blackStringGeologo.svg", // Path relative to the `public` folder
+    apple: "/logo/blackStringGeologo.svg", // For Apple Touch Icons
+  },
 };
 const inter = Inter({ subsets: ["latin"] });
 

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useSelector } from "react-redux";
+import { jwtDecode } from "jwt-decode";
 
 import HomeCarousel from "../components/HomeCarousel";
 import HomeSearch from "../components/HomeSearch";
@@ -15,8 +16,10 @@ import { selectAuth } from "@/features/authSlice";
 
 function Home() {
   const { refreshToken } = useSelector(selectAuth);
+  const isValidToken =
+    refreshToken && jwtDecode(refreshToken)?.exp > Date.now() / 1000;
 
-  if (refreshToken) {
+  if (isValidToken) {
     return <DashboardHome />;
   }
 
