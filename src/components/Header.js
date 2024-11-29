@@ -351,7 +351,7 @@ function Header() {
                     onClick={() =>
                       handleLogout({
                         dispatch,
-                        navigate: router.push,
+                        navigate: router.replace,
                         refreshToken,
                         logoutUser,
                       })

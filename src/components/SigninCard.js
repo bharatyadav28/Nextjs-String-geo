@@ -158,7 +158,7 @@ function SigninCard() {
           router.push(`/auth/billing?redirectFrom=${redirectFrom}`);
         }
       } else if (from) {
-        router.push(from);
+        router.replace(from);
       } else {
         if (redirectToPaymentPage) {
           router.push("/auth/billing");
