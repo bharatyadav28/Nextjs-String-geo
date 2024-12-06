@@ -96,10 +96,7 @@ function ShortsVideoPlayer({
   };
 
   const handleShare = async () => {
-    const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(
-      navigator.userAgent
-    );
-
+   
     const baseUrl = window.location.href.split("/").slice(0, -1).join("/");
     const sharedUrl = new URL(`${baseUrl}/${nickName || id}`);
     if (sharedUrl.hostname.startsWith("www.")) {
@@ -107,46 +104,18 @@ function ShortsVideoPlayer({
     }
 
     const cleanUrl = sharedUrl.toString();
-    try {
-      if (isMobileDevice) {
-        const response = await axios.post(
-          `${baseAddr}/fetch-image`,
-          {
-            link: `${imgAddr}/${thumbnail}`,
-          },
-          {
-            responseType: "blob",
-          }
-        );
-
-        const blob = response.data;
-        const file = new File([blob], "image.png", { type: "image/png" });
-
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({
-            title: "Video:",
-            url: cleanUrl,
-            files: [file],
-          });
-        } else {
-          await navigator.share({
-            title: "Video:",
-            url: cleanUrl,
-          });
-        }
-      } else {
-        await navigator.share({
-          title: "Video:",
-          url: cleanUrl,
-        });
-      }
-    } catch (error) {
-      console.error("Error sharing:", error);
+   
+    try{
       await navigator.share({
         title: "Video:",
         url: cleanUrl,
       });
+    }catch(error){
+
+      console.error("Error sharing:", error);
     }
+      
+    
   };
 
   return (

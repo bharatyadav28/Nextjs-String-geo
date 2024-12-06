@@ -108,56 +108,24 @@ function VideoPage({ id }) {
   };
 
   const handleShare = async () => {
-    const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(
-      navigator.userAgent
-    );
+   
 
     const url = new URL(window.location.href);
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.replace("www.", "");
     }
-    const cleanUrl = url.toString();
+    const cleanUrl = url.toString();    
 
-    try {
-      if (isMobileDevice) {
-        const response = await axios.post(
-          `${baseAddr}/fetch-image`,
-          {
-            link: `${imgAddr}/${videoData?.thumbnail_url}`,
-          },
-          {
-            responseType: "blob",
-          }
-        );
-
-        const blob = response.data;
-        const file = new File([blob], "image.png", { type: "image/png" });
-
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({
-            title: "Video:",
-            url: cleanUrl,
-            files: [file],
-          });
-        } else {
-          await navigator.share({
-            title: "Video:",
-            url: cleanUrl,
-          });
-        }
-      } else {
-        await navigator.share({
-          title: "Video:",
-          url: cleanUrl,
-        });
-      }
-    } catch (error) {
-      console.error("Error sharing:", error);
+    try{
       await navigator.share({
         title: "Video:",
         url: cleanUrl,
       });
+    }catch(error){
+      console.log(error);
     }
+      
+
   };
 
   useEffect(() => {
