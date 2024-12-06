@@ -222,10 +222,14 @@ function Account() {
   };
 
   useEffect(() => {
+    if(refreshToken){
+
+    
     getAccount();
     getTransactions();
     getSubscription();
     // getCountryCode('919970325614');
+    }
   }, [refreshToken]);
 
   const handleProfileUpdate = async (e) => {
