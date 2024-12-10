@@ -86,7 +86,7 @@ function Account() {
   const [picToUpload, setPicToUpload] = useState(null);
   const [picPreview, setPicPreview] = useState(null);
 
-  let { refreshToken, user } = useSelector(selectAuth);
+  let { refreshToken, user,isActivePlan } = useSelector(selectAuth);
   const [logoutUser] = useLogoutUserMutation();
 
   const [getProfile] = useGetProfileMutation();
@@ -720,6 +720,7 @@ function Account() {
                                 <Button
                                   variant="transparent"
                                   className="form-btn text-white py-1 text-nowrap"
+                                  disabled={isActivePlan}
                                   onClick={() => router.push("/auth/billing")}
                                 >
                                   Upgrade Plan <FaCrown className="mb-1" />{" "}
