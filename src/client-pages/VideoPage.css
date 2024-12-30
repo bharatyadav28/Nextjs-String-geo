@@ -14,7 +14,9 @@
 
 }
 
-.preview-image-wrapper::before {
+
+@media (min-width:900px) {
+  .preview-image-wrapper::before {
     content: "";
     position: absolute;
     top: 0;
@@ -41,6 +43,9 @@
       
       pointer-events: none;
   }
+}
+
+
 
 .preview-image{
     max-width: 100%;

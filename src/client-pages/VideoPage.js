@@ -195,7 +195,7 @@ function VideoPage({ id }) {
                       )}
                     />
 
-                    <div className="text-secondary fw-bold">
+                    <div className="text-secondary fw-semibold " >
                       <p style={{ color: "#ccc" }}>
                         {videoData?.genres
                           ?.map((genre) => genre?.name)
@@ -218,7 +218,7 @@ function VideoPage({ id }) {
                     size={`${
                       isMobileDevice ? "sm" : isMediumDevice ? "md" : "lg"
                     }`}
-                    className="sub-to-watch-btn text-nowrap fw-bold rounded-3  py-md-3 px-3 py-2"
+                    className="sub-to-watch-btn text-nowrap fw-bold rounded-3  py-sm-3 py-2 px-3 "
                     variant="transparent"
                     onClick={() => {
                       if (accessToken) {
@@ -232,18 +232,18 @@ function VideoPage({ id }) {
 
                     {accessToken ? "Subscribe to Watch" : "Login to Watch"}
                   </Button>
-                  {!isMobileDevice && (
+                  
                     <Button
                       size={`${
                         isMobileDevice ? "sm" : isMediumDevice ? "md" : "lg"
                       }`}
-                      className="big-share-btn text-nowrap py-md-3 px-md-4 ms-2 fw-bold rounded-3 "
+                      className="big-share-btn text-nowrap py-sm-3 py-2 px-sm-4 px-3  ms-2 fw-bold rounded-3 "
                       variant="transparent"
                       onClick={handleShare}
                     >
-                      <IoMdShare className="mb-1" size={24} />
+                      <IoMdShare className="mb-1" size={isMobileDevice?17:24} />
                     </Button>
-                  )}
+                  
                 </div>
               </div>
             </div>
@@ -321,7 +321,7 @@ function VideoPage({ id }) {
                   </div>
 
                   <Row>
-                    <Col xs={7} className="text-secondary fw-bold">
+                    <Col xs={videoData?.video_url?7:12} className="text-secondary fw-semibold">
                       {(videoData?.video_url || isMobileDevice) && (
                         <p style={{ color: "#ccc" }}>
                           {videoData?.genres
@@ -339,10 +339,12 @@ function VideoPage({ id }) {
                         </p>
                       )}
                     </Col>
+
+                    {videoData?.video_url &&
                     <Col className="text-end">
                       {/* {videoData?.views} Views  */}
 
-                      {(videoData?.video_url || isMobileDevice) && (
+                      {(videoData?.video_url) && (
                         <Button
                           disabled={!videoData?.title}
                           className="rounded-pill text-nowrap mx-md-3 mx-1"
@@ -353,6 +355,7 @@ function VideoPage({ id }) {
                         </Button>
                       )}
                     </Col>
+                    }
                   </Row>
                 </Col>
               )}
